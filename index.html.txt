@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AF M.A.S & Brain Games | الحساب الذهني</title>
+    <!-- خط Tajawal الأنيق -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- مكتبة Tailwind CSS للتصميم العصري -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #fcfcfc;
+        }
+        /* تأثير الظل البرتقالي الخفيف المخصص للـ Bento Cards */
+        .bento-card {
+            background: #ffffff;
+            border: 1px solid #eaeaea;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .bento-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(249, 115, 22, 0.3);
+            box-shadow: 0 20px 40px rgba(249, 115, 22, 0.12);
+        }
+        /* مظهر الخرزات في المعداد */
+        .bead {
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- الهيدر ولوجو الشركة -->
+    <header class="w-full py-6 bg-white border-b border-gray-100 sticky top-0 z-40 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="https://files.catbox.moe/z7c7hw.jpeg" alt="AF Logo" class="w-12 h-12 rounded-xl object-cover shadow-md border border-orange-100">
+                <div>
+                    <h1 class="text-xl font-black text-orange-500 tracking-tight">AF M.A.S</h1>
+                    <p class="text-xs text-gray-400 font-medium">& Brain Games</p>
+                </div>
+            </div>
+            <a href="https://wa.me/201XXXXXXXXX?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%B4%D8%B1%D9%83%D8%A9%20AF%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%85%D9%88%D8%A7%D9%82%D9%8A%D8%AA%20%D8%AF%D9%8Action%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B3%D8%A7%D8%A8%20%D8%A7%D9%84%D8%B0%D9%87%D9%86%D9%8A%20%D9%88%D8%A3%D9%84%D8%B9%D8%A7%D8%A8%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D9%84%D8%B7%D9%81%D9%84%D9%8A" 
+               class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2.5 px-5 rounded-xl transition duration-300 shadow-lg shadow-orange-500/20 text-sm">
+                سجل الآن
+            </a>
+        </div>
+    </header>
+
+    <!-- شبكة Bento Grid الرئيسية -->
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(220px,_auto)]">
+            
+            <!-- كارت 1: واجهة ترحيبية وتعريفية (كبير - يأخذ مساحة عمودين) -->
+            <div class="bento-card md:col-span-2 rounded-3xl p-8 flex flex-col justify-between bg-gradient-to-br from-white to-orange-50/20 relative overflow-hidden">
+                <div class="absolute -left-10 -top-10 w-40 h-40 bg-orange-100 rounded-full blur-3xl opacity-50"></div>
+                <div>
+                    <span class="bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">مستقبل طفلك يبدأ هنا</span>
+                    <h2 class="text-3xl md:text-4xl font-black mt-4 mb-3 leading-tight text-gray-900">
+                        برنامج <span class="text-orange-500">AF M.A.S</span> لتطوير عبقرية الأطفال
+                    </h2>
+                    <p class="text-gray-500 max-w-xl leading-relaxed">
+                        ندمج بين تقنيات العداد الياباني القديم وأحدث ألعاب الذكاء العالمية المبتكرة لنصنع جيلاً متميزاً في سرعة البديهة والتركيز الخارق.
+                    </p>
+                </div>
+                <div class="mt-6 flex flex-wrap gap-4 text-xs font-semibold text-gray-500">
+                    <span class="flex items-center gap-1.5 bg-gray-100 px-3 py-2 rounded-xl">🧠 زيادة التركيز بنسبة 95%</span>
+                    <span class="flex items-center gap-1.5 bg-gray-100 px-3 py-2 rounded-xl">⚡ حل المسائل في ثوانٍ</span>
+                </div>
+            </div>
+
+            <!-- كارت 2: العداد الياباني التفاعلي (طولي) -->
+            <div class="bento-card rounded-3xl p-6 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-1 flex items-center gap-2">
+                        <span>🧮</span> معداد ياباني تفاعلي
+                    </h3>
+                    <p class="text-xs text-gray-400 mb-4">اضغط على الخرزات لتجربتها بنفسك!</p>
+                </div>
+                
+                <!-- هيكل المعداد التفاعلي (3 أعمدة مبسطة لغرض العرض واللعب السريع) -->
+                <div class="bg-amber-50/60 p-4 rounded-2xl border-2 border-amber-900/20 flex justify-around relative h-48 items-center">
+                    <!-- عارضة المعداد الأفقية الوسطى -->
+                    <div class="absolute w-full h-2 bg-amber-900 top-[33%] left-0 z-10 shadow-sm"></div>
+                    
+                    <!-- عمود 1 -->
+                    <div class="w-8 bg-amber-800/10 h-full rounded-full flex flex-col justify-between relative px-1 py-2">
+                        <!-- الخرزة العلوية (تساوي 5) -->
+                        <div class="bead w-6 h-4 bg-orange-500 rounded-full shadow-md hover:bg-orange-600" onclick="toggleBead(this, -5)"></div>
+                        <div class="h-12"></div> <!-- مساحة الفاصل -->
+                        <!-- الخرزات السفلية (كل واحدة تساوي 1) -->
+                        <div class="flex flex-col gap-1">
+                            <div class="bead w-6 h-4 bg-amber-600 rounded-full shadow-md hover:bg-amber-700" onclick="toggleBead(this, 5)"></div>
+                            <div class="bead w-6 h-4 bg-amber-600 rounded-full shadow-md hover:bg-amber-700" onclick="toggleBead(this, 5)"></div>
+                            <div class="bead w-6 h-4 bg-amber-600 rounded-full shadow-md hover:bg-amber-700" onclick="toggleBead(this, 5)"></div>
+                        </div>
+                    </div>
+
+                    <!-- عمود 2 -->
+                    <div class="w-8 bg-amber-800/10 h-full rounded-full flex flex-col justify-between relative px-1 py-2">
+                        <div class="bead w-6 h-4 bg-orange-500 rounded-full shadow-md hover:bg-orange-600" onclick="toggleBead(this, -5)"></div>
+                        <div class="h-12"></div>
+                        <div class="flex flex-col gap-1">
+                            <div class="bead w-6 h-4 bg-amber-600 rounded-full shadow-md hover:bg-amber-700" onclick="toggleBead(this, 5)"></div>
+                            <div class="bead w-6 h-4 bg-amber-600 rounded-full shadow-md hover:bg-amber-700" onclick="toggleBead(this, 5)"></div>
+                            <div class="bead w-6 h-4 bg-amber-600 rounded-full shadow-md hover:bg-amber-700" onclick="toggleBead(this, 5)"></div>
+                        </div>
+                    </div>
+
+                    <!-- عمود 3 -->
+                    <div class="w-8 bg-amber-800/10 h-full rounded-full flex flex-col justify-between relative px-1 py-2">
+                        <div class="bead w-6 h-4 bg-orange-500 rounded-full shadow-md hover:bg-orange-600" onclick="toggleBead(this, -5)"></div>
+                        <div class="h-12"></div>
+                        <div class="flex flex-col gap-1">
+                            <div class="bead w-6 h-4 bg-amber-600 rounded-full shadow-md hover:bg-amber-700" onclick="toggleBead(this, 5)"></div>
+                            <div class="bead w-6 h-4 bg-amber-600 rounded-full shadow-md hover:bg-amber-700" onclick="toggleBead(this, 5)"></div>
+                            <div class="bead w-6 h-4 bg-amber-600 rounded-full shadow-md hover:bg-amber-700" onclick="toggleBead(this, 5)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-[10px] text-center text-gray-400 mt-2">تطوير التآزر البصري الحركي للطفل</div>
+            </div>
+
+            <!-- كارت 3: لغز ذكاء سريع تفاعلي -->
+            <div class="bento-card rounded-3xl p-6 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-1 flex items-center gap-2">
+                        <span>⚡</span> لغز ذكاء سريع
+                    </h3>
+                    <p class="text-sm text-gray-500 mt-3 font-medium">
+                        ما هو العدد الذي إذا ضربته في نفسه، ثم أضفت إليه (5) يصبح الناتج (30)؟
+                    </p>
+                </div>
+                
+                <div class="my-4">
+                    <!-- خيارات تفاعلية -->
+                    <div class="grid grid-cols-3 gap-2">
+                        <button onclick="checkRiddle(this, false)" class="bg-gray-50 hover:bg-gray-100 border border-gray-200 py-2 rounded-xl text-sm font-bold transition">4</button>
+                        <button onclick="checkRiddle(this, true)" class="bg-gray-50 hover:bg-gray-100 border border-gray-200 py-2 rounded-xl text-sm font-bold transition">5</button>
+                        <button onclick="checkRiddle(this, false)" class="bg-gray-50 hover:bg-gray-100 border border-gray-200 py-2 rounded-xl text-sm font-bold transition">6</button>
+                    </div>
+                    <p id="riddle-feedback" class="text-xs text-center mt-3 font-semibold h-4 transition-all"></p>
+                </div>
+
+                <div class="text-[11px] text-gray-400 bg-gray-50 p-2 rounded-xl text-center">
+                    تساعد هذه الألغاز على تنشيط الفص الأيمن من الدماغ.
+                </div>
+            </div>
+
+            <!-- كارت 4: فوائد البرنامج للطفل (عريض - عمودين) -->
+            <div class="bento-card md:col-span-2 rounded-3xl p-6 md:p-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-xl text-gray-900 mb-6 flex items-center gap-2">
+                        <span>🌟</span> ماذا يستفيد طفلك من البرنامج؟
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3">
+                            <div class="p-2.5 bg-orange-100 text-orange-600 rounded-xl font-bold">01</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-sm">السرعة والحسم الفائق</h4>
+                                <p class="text-xs text-gray-400 mt-1">القدرة على إجراء مئات العمليات الحسابية المعقدة غيابياً وبدون آلة حاسبة.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="p-2.5 bg-orange-100 text-orange-600 rounded-xl font-bold">02</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-sm">الذاكرة الفوتوغرافية</h4>
+                                <p class="text-xs text-gray-400 mt-1">تطوير مهارة تخيل العداد ورسم الأرقام والمسائل كصورة ثابتة داخل الذهن.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="p-2.5 bg-orange-100 text-orange-600 rounded-xl font-bold">03</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-sm">التفوق الدراسي العام</h4>
+                                <p class="text-xs text-gray-400 mt-1">المهارات المكتسبة لا تنعكس على الرياضيات فقط بل ترفع مستويات الاستيعاب بجميع المواد.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="p-2.5 bg-orange-100 text-orange-600 rounded-xl font-bold">04</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-sm">ثقة عالية بالنفس</h4>
+                                <p class="text-xs text-gray-400 mt-1">تلاشي الخوف تماماً من المسائل الرياضية والمواقف التي تتطلب تفكيراً منطقياً سريعاً.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- كارت 5: طرق التواصل والمعلومات الأساسية -->
+            <div class="bento-card rounded-3xl p-6 flex flex-col justify-between bg-zinc-900 text-white border-none">
+                <div>
+                    <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-orange-400">
+                        <span>📞</span> قنوات التواصل المباشر
+                    </h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-4">يسعدنا استقبال استفساراتكم وتحديد موعد اختبار تحديد المستوى مجاناً لطفلكم.</p>
+                </div>
+                
+                <div class="flex flex-col gap-3 text-xs">
+                    <a href="tel:+201XXXXXXXXX" class="flex items-center gap-3 bg-zinc-800 hover:bg-zinc-700 p-3 rounded-xl transition">
+                        <span>📞</span>
+                        <div>
+                            <p class="text-zinc-400 text-[10px]">اتصال هاتفي</p>
+                            <p class="font-mono font-bold text-zinc-200">+20 1XX XXX XXXX</p>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-3 bg-zinc-800 p-3 rounded-xl">
+                        <span>📍</span>
+                        <div>
+                            <p class="text-zinc-400 text-[10px]">المقر الرئيسي</p>
+                            <p class="font-bold text-zinc-200">الإسكندرية، جمهورية مصر العربية</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-[10px] text-zinc-500 text-center mt-4 border-t border-zinc-800 pt-3">
+                    جميع الحقوق محفوظة © شركة AF 2026
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- زر الواتساب العائم الأسفل والأخضر المميز مع تأثير نبضي للملائمة البصرية -->
+    <a href="https://wa.me/201XXXXXXXXX?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%B4%D8%B1%D9%83%D8%A9%20AF%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D1%85%D9%88%D8%A7%D9%82%D9%8A%D8%AA%20%D8%AF%D9%8Action%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B3%D8%A7%D8%A8%20%D8%A7%D9%84%D8%B0%D9%87%D9%86%D9%8A%20%D9%88%D8%A3%D9%84%D8%B9%D8%A7%D8%A8%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D9%84%D8%B7%D9%81%D9%84%D9%8A" 
+       target="_blank"
+       class="fixed bottom-6 left-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 group animate-bounce"
+       title="تواصل معنا عبر واتساب">
+        <!-- أيقونة واتساب مبسطة بواسطة ميزات الـ SVG لتجنب تحميل مراجع خارجية غريبة -->
+        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.411 0 11.989 0c3.183.001 6.177 1.24 8.43 3.496 2.253 2.256 3.491 5.253 3.491 8.438 0 6.58-5.351 11.928-11.93 11.928-2.001-.001-3.968-.506-5.714-1.472L0 24zm6.59-4.846c1.6.95 3.16 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.742.002-2.602-1.013-5.05-2.86-6.898-1.847-1.848-4.303-2.865-6.91-2.867-5.44 0-9.866 4.37-9.871 9.742-.002 1.742.466 3.443 1.357 4.917L1.374 21.93l4.273-1.117z"/>
+        </svg>
+        <span class="absolute right-14 bg-white text-gray-800 font-bold px-3 py-1.5 rounded-xl shadow-lg border text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            استفسر الآن عن المواعيد!
+        </span>
+    </a>
+
+    <!-- أكواد جافا سكريبت التفاعلية البسيطة جداً -->
+    <script>
+        // تفاعل تحريك خرزات المعداد الياباني عند النقر عليها لتبدو حية وتفاعلية
+        function toggleBead(bead, value) {
+            if (bead.style.transform === 'translateY(15px)' || bead.style.transform === 'translateY(-15px)') {
+                bead.style.transform = 'translateY(0px)';
+            } else {
+                bead.style.transform = value > 0 ? 'translateY(15px)' : 'translateY(-15px)';
+            }
+        }
+
+        // التحقق من إجابة اللغز السريع
+        function checkRiddle(button, isCorrect) {
+            const feedback = document.getElementById('riddle-feedback');
+            
+            // إعادة ضبط جميع الأزرار أولاً لتهيئة المظهر
+            button.parentElement.querySelectorAll('button').forEach(btn => {
+                btn.className = "bg-gray-50 border border-gray-200 py-2 rounded-xl text-sm font-bold transition";
+            });
+
+            if (isCorrect) {
+                button.className = "bg-green-500 border border-green-500 text-white py-2 rounded-xl text-sm font-bold transition shadow-md shadow-green-500/20";
+                feedback.textContent = "🎉 إجابة صحيحة وممتازة! (5 × 5 = 25 + 5 = 30)";
+                feedback.className = "text-xs text-center mt-3 font-semibold text-green-600";
+            } else {
+                button.className = "bg-red-500 border border-red-500 text-white py-2 rounded-xl text-sm font-bold transition shadow-md shadow-red-500/20";
+                feedback.textContent = "❌ حاول مرة أخرى، فكّر بها جيداً!";
+                feedback.className = "text-xs text-center mt-3 font-semibold text-red-500";
+            }
+        }
+    </script>
+</body>
+</html>
