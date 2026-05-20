@@ -119,12 +119,32 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        /* تقسيم الكروت بأسلوب البنتو الجديد المنسق */
+        /* تقسيم الكروت بأسلوب البنتو */
         .card-hero {
             grid-column: span 3;
             text-align: center;
-            padding: 50px 30px;
+            padding: 40px 30px;
             background: radial-gradient(circle at 50% 50%, rgba(255, 85, 0, 0.08) 0%, transparent 70%), var(--card-bg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* تنسيق اللوجو المضاف حديثاً */
+        .brand-logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 22px;
+            object-fit: cover;
+            border: 2px solid var(--neon-orange);
+            box-shadow: 0 0 20px rgba(255, 85, 0, 0.4);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .brand-logo:hover {
+            transform: scale(1.05) rotate(3deg);
         }
 
         .card-tall {
@@ -140,10 +160,6 @@
             grid-column: span 2;
             align-items: center;
             text-align: center;
-        }
-
-        .card-full-width {
-            grid-column: span 3;
         }
 
         .card-cta {
@@ -241,7 +257,6 @@
             transition: background-color 0.3s ease;
         }
 
-        /* تحديد مواضع أوجه اللعبة هندسياً */
         .face-g.u { transform: rotateX(90deg) translateZ(70px); }
         .face-g.d { transform: rotateX(-90deg) translateZ(70px); }
         .face-g.f { transform: translateZ(70px); }
@@ -325,12 +340,13 @@
             .bento-container {
                 grid-template-columns: 1fr;
             }
-            .card-hero, .card-tall, .card-wide, .card-game, .card-full-width, .card-cta {
+            .card-hero, .card-tall, .card-wide, .card-game, .card-cta {
                 grid-column: span 1;
                 grid-row: auto;
             }
             h1 { font-size: 2rem; }
             .neon-btn { font-size: 1rem; padding: 15px 20px; }
+            .brand-logo { width: 90px; height: 90px; }
         }
     </style>
 </head>
@@ -347,8 +363,9 @@
     <!-- حاوية البنتو Grid الرئيسية -->
     <div class="bento-container">
         
-        <!-- الكارت الرئيسي (Hero) -->
+        <!-- الكارت الرئيسي (Hero) - يحتوي على اللوجو الآن -->
         <div class="bento-card card-hero">
+            <img src="https://files.catbox.moe/z7c7hw.jpeg" alt="AF Rubik's Mastery Logo" class="brand-logo">
             <h1>منصة <span>AF Rubik's Mastery</span></h1>
             <p>حيث يتحول الذكاء البصري والتحدي إلى احتراف حقيقي. نطور مهارات طفلك الذهنية عبر حل مكعبات الروبيك بأسرع الاستراتيجيات العالمية.</p>
         </div>
@@ -370,7 +387,7 @@
             <p>يتعلم الطفل الخوارزميات الأساسية والمتقدمة لحل المكعب (3x3) وطرق الاختزال السريع، بالإضافة إلى كسر حاجز الوقت واكتساب الثقة بالنفس لمواجهة التحديات المعقدة.</p>
         </div>
 
-        <!-- 🎮 كارت لعبة الروبيك التفاعلية الجديدة 3D 🎮 -->
+        <!-- 🎮 كارت لعبة الروبيك التفاعلية 3D 🎮 -->
         <div class="bento-card card-game">
             <h2>🎮 جرب مهاراتك: تحدي الروبيك المباشر</h2>
             <p>مكعب تفاعلي مصغر! استخدم أزرار التحكم لتشغيل وتدوير أوجه المكعب وحاول إعادة ترتيب الألوان بنفسك.</p>
@@ -422,19 +439,17 @@
 
     </div>
 
-    <!-- 🧠 نظام تشغيل ومنطق لعبة مكعب الروبيك التفاعلية 🧠 -->
+    <!-- نظام تشغيل ومنطق لعبة مكعب الروبيك التفاعلية -->
     <script>
-        // تعريف الألوان الأساسية للمكعب المتناسقة مع هوية الموقع
         const COLORS = {
-            u: '#ffffff', // أبيض (أعلى)
-            d: '#ffeb3b', // أصفر (أسفل)
-            f: '#4caf50', // أخضر (أمام)
-            b: '#2196f3', // أزرق (خلف)
-            l: '#ff5500', // برتقالي نيون (يسار)
-            r: '#e91e63'  // أحمر (يمين)
+            u: '#ffffff', // أبيض
+            d: '#ffeb3b', // أصفر
+            f: '#4caf50', // أخضر
+            b: '#2196f3', // أزرق
+            l: '#ff5500', // برتقالي نيون
+            r: '#e91e63'  // أحمر
         };
 
-        // الحالة الافتراضية للمكعب (محلول بالكامل)
         const initialCubeState = {
             u: Array(9).fill(COLORS.u),
             d: Array(9).fill(COLORS.d),
@@ -446,7 +461,6 @@
 
         let currentCube = JSON.parse(JSON.stringify(initialCubeState));
 
-        // دالة لرسم وعرض ملصقات الألوان على أوجه المكعب في الـ HTML
         function renderCube() {
             const faces = ['u', 'd', 'f', 'b', 'l', 'r'];
             faces.forEach(face => {
@@ -461,7 +475,6 @@
             });
         }
 
-        // تدوير مصفوفة وجه واحد باتجاه عقارب الساعة
         function rotateFaceClockwise(face) {
             const t = [...currentCube[face]];
             currentCube[face] = [
@@ -471,35 +484,26 @@
             ];
         }
 
-        // حركة تدوير الوجه العلوي (U) وتغيير ألوان الأوجه الجانبية المرتبطة به
         function rotateU() {
             rotateFaceClockwise('u');
             const temp = [currentCube.f[0], currentCube.f[1], currentCube.f[2]];
-            
-            // إزاحة الصفوف العلوية للأوجه الجانبية
             currentCube.f[0] = currentCube.r[0]; currentCube.f[1] = currentCube.r[1]; currentCube.f[2] = currentCube.r[2];
             currentCube.r[0] = currentCube.b[0]; currentCube.r[1] = currentCube.b[1]; currentCube.r[2] = currentCube.b[2];
             currentCube.b[0] = currentCube.l[0]; currentCube.b[1] = currentCube.l[1]; currentCube.b[2] = currentCube.l[2];
             currentCube.l[0] = temp[0];          currentCube.l[1] = temp[1];          currentCube.l[2] = temp[2];
-            
             renderCube();
         }
 
-        // حركة تدوير الوجه الأيمن (R) وتغيير ألوان الأوجه المرتبطة به طردياً
         function rotateR() {
             rotateFaceClockwise('r');
             const temp = [currentCube.u[2], currentCube.u[5], currentCube.u[8]];
-            
-            // إزاحة الأعمدة اليمنى للأوجه المرتبطة
             currentCube.u[2] = currentCube.f[2]; currentCube.u[5] = currentCube.f[5]; currentCube.u[8] = currentCube.f[8];
             currentCube.f[2] = currentCube.d[2]; currentCube.f[5] = currentCube.d[5]; currentCube.f[8] = currentCube.d[8];
             currentCube.d[2] = currentCube.b[6]; currentCube.d[5] = currentCube.b[3]; currentCube.d[8] = currentCube.b[0];
             currentCube.b[6] = temp[0];          currentCube.b[3] = temp[1];          currentCube.b[0] = temp[2];
-            
             renderCube();
         }
 
-        // دالة الخلط العشوائي للمكعب لمحاكاة بدء اللعب والتحدي
         function scrambleCube() {
             const moves = [rotateU, rotateR];
             for (let i = 0; i < 12; i++) {
@@ -508,13 +512,11 @@
             }
         }
 
-        // إعادة تعيين المكعب لحالته الأصلية الأولى مرتباً ومحلولاً
         function resetCube() {
             currentCube = JSON.parse(JSON.stringify(initialCubeState));
             renderCube();
         }
 
-        // تشغيل التهيئة الأولية للمكعب عند تحميل الصفحة لأول مرة
         renderCube();
     </script>
 </body>
